@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+  }
+.conatiner {
+    width: 100%;
+}
+.row{
+    justify-content: center;
+}
+
+table, td, th {
+    border: 1px solid black;
+  }
+  
+table {
+    width: 60%;
+    border-collapse: collapse;
+
+  }
+.table-style{
+    margin-left: auto; 
+    margin-right: auto;
+  }
