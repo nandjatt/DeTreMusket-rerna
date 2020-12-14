@@ -7,8 +7,9 @@ async function createPun(e) {
     let formData = new FormData(this);
 
     let postContent = {
-        content: document.getElementById('content').value
-        //content: formData.get('content')
+        title: formData.get('title'),
+        author: formData.get('author'),
+        content: formData.get('content')
     }
 
     console.log(postContent);

@@ -13,7 +13,10 @@ async function prefillForm() {
         console.log(data.content, data.title);
 
         document.getElementById('title').value = data.title;
+        document.getElementById('author').value = data.author;
         document.getElementById('content').value = data.content;
+
+
 
     } catch (message) {
         throw new Error(message);
@@ -29,10 +32,13 @@ function updatePost() {
 
         let formData = new FormData(this);
         
-        let updateTitle = {content: formData.get('title')}
-        let updateContent = {content: formData.get('content')}
-        console.log(updateContent, updateTitle);
-        console.log(JSON.stringify(updateContent, updateTitle));
+        let postContent = {
+            title: formData.get('title'),
+            author: formData.get('author'),
+            content: formData.get('content')
+        }
+        console.log(postContent);
+        console.log(JSON.stringify(postContent));
     
         try {
             await fetch('http://localhost:3000/posts/' + urlParams.get('id'), {
@@ -40,7 +46,7 @@ function updatePost() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(updateContent, updateTitle) // body data type must match "Content-Type" header
+                body: JSON.stringify(postContent) // body data type must match "Content-Type" header
             });
     
             window.location.replace('index.html') // redirects to the index.html page
