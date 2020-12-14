@@ -6,18 +6,22 @@ async function createPun(e) {
 
     let formData = new FormData(this);
 
-    let object = {
-        // content: document.getElementById('content-textarea').value
-        content: formData.get('content')
+    let postContent = {
+        content: document.getElementById('content').value
+        //content: formData.get('content')
     }
 
+    console.log(postContent);
+    console.log(JSON.stringify(postContent));
+
     try {
-        await fetch('http://localhost:3000', {
+        await fetch('http://localhost:3000/posts', {
             method: 'POST', // GET, POST, PATCH, DELETE
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
-            body: JSON.stringify(object) // body data type must match "Content-Type" header
+            body: JSON.stringify(postContent) // body data type must match "Content-Type" header
         });
     
         window.location.replace('index.html') // redirects to the index.html page

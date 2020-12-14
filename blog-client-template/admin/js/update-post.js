@@ -8,7 +8,7 @@ async function prefillForm() {
     console.log(urlParams.get('id'));
 
     try {
-        let response = await fetch('http://localhost:3000' + urlParams.get('id'));
+        let response = await fetch('http://localhost:3000/posts' + urlParams.get('id'));
         let data = await response.json();
         console.log(data.content);
 
@@ -27,17 +27,17 @@ function updatePunEvent() {
         e.preventDefault();
 
         let formData = new FormData(this);
-        let object = {content: formData.get('content')}
-        console.log(object);
-        console.log(JSON.stringify(object));
+        let postContent = {content: formData.get('content')}
+        console.log(postContent);
+        console.log(JSON.stringify(postContent));
     
         try {
-            await fetch('https://puns-app.herokuapp.com/puns/' + urlParams.get('id'), {
+            await fetch('http://localhost:3000/posts' + urlParams.get('id'), {
                 method: 'PATCH', // GET, POST, PATCH, DELETE
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(object) // body data type must match "Content-Type" header
+                body: JSON.stringify(postContent) // body data type must match "Content-Type" header
             });
     
             window.location.replace('index.html') // redirects to the index.html page
