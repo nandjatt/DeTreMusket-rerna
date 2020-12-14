@@ -19,7 +19,8 @@ table {
     border-collapse: collapse;
 
   }
-.table-style{
+#table-style{
     margin-left: auto; 
     margin-right: auto;
   }
+
