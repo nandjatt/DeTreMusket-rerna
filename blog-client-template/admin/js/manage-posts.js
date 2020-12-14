@@ -10,27 +10,34 @@ async function fetchAllPuns() {
         // let response = await fetch('http://localhost:3000/puns');
         let data = await response.json();
 
-        let punsHTML = '';
+        let tableHTML = '';
         for (let pun of data.reverse()) {
             console.log(pun);
-            punsHTML += `<li class="list-group-item">`
+            // tableHTML += `<p>${pun.content}`;
 
-            punsHTML += `<p>${pun.content}`;
+            let postDate = new Date(pun.date);
 
-            let punDate = new Date(pun.date);
-            punsHTML += `<br> <span class="date">- ${punDate.getFullYear()}-${punDate.getMonth()}-${punDate.getDate()}</span> </p>`;
-            
-            punsHTML += `<div>`;
-            punsHTML += `<a href="update-pun.html?id=${pun['_id']}">Update</a> | `;
-            punsHTML += `<a href="#" class="delete-pun-btn" data-id="${pun['_id']}">Delete</a> `;
-            punsHTML += `</div>`;
+            tableHTML += `<td>${title}</td>`;
+            tableHTML += `<td>${author}</td>`;
+            tableHTML += `<td class="date">- ${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()} </td>`;
+            tableHTML += `<td><a href="update-pun.html?id=${pun['_id']}">Update</a> |` +
+                         `<a href="#" class="delete-pun-btn" data-id="${pun['_id']}">Delete</a></td>`;
+      
 
-            punsHTML += `</li>`;
+
+            // let tableHTML +=
+            // `<td>${title}</td>`+
+            // `<td>${author}</td>`+
+            // `<td>${postDate}</td>`+
+            // `<td><a href="update-pun.html?id=${pun['_id']}">Update</a> | + 
+            //     <a href="#" class="delete-pun-btn" data-id="${pun['_id']}">Delete</a>
+            // </td>`+
+    
 
             
         }
 
-        document.getElementById('pun-list').innerHTML = punsHTML;
+        document.getElementById('table-list').innerHTML = tableHTML;
     } catch (message) {
         throw new Error(message);
     }
