@@ -7,7 +7,7 @@ async function fetchAllPuns() {
 
     try {
         //let response = await fetch('https://puns-app.herokuapp.com/puns');
-        let response = await fetch('http://localhost:3000/puns');
+        let response = await fetch('http://localhost:3000');
         let data = await response.json();
 
         let tableHTML = '';

@@ -12,7 +12,7 @@ async function createPun(e) {
     }
 
     try {
-        await fetch('https://puns-app.herokuapp.com/puns', {
+        await fetch('http://localhost:3000', {
             method: 'POST', // GET, POST, PATCH, DELETE
             headers: {
                 'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ async function prefillForm() {
     console.log(urlParams.get('id'));
 
     try {
-        let response = await fetch('https://puns-app.herokuapp.com/puns/' + urlParams.get('id'));
+        let response = await fetch('http://localhost:3000' + urlParams.get('id'));
         let data = await response.json();
         console.log(data.content);
 
