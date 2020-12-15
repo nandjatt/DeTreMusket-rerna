@@ -1,12 +1,17 @@
 .conatiner {
+    background-color: lightgray;
+}
+
+.row{
     width: 100%;
 }
 
+h1{
+    text-align: center;
+    background-color: li;
+}
 
-
-
-
-
-.table-style{
-    border: 8px solid black;
+#content-postschema{
+    width: 80%;
+    justify-items: center;
 }
