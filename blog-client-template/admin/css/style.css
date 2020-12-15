@@ -1,26 +1,144 @@
 body{
-    margin: 0;
-    padding: 0;
-    background-color: lightgrey;
-  }
+  margin: 0;
+  padding: 0;
+
+}
 .conatiner {
-    width: 100%;
+  position: relative;
+  color: white;
 }
+
 .row{
-    justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+header{
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-table, td, th {
-    border: 1px solid black;
-  }
-  
-table {
-    width: 60%;
-    border-collapse: collapse;
+#header-pic{
+  width: 100%;
+  height: 40%;
+}
+.header{
+  text-align: center;
+  color: black
+}
+h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+h3{
+  font-size: 60px;
+}
 
-  }
-#table-style{
-    margin-left: auto; 
-    margin-right: auto;
-  }
 
+
+
+/*----------------------------------------manage page------------------------------*/
+#start-link{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  text-decoration: none;
+  color: white;
+}
+#start{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  text-decoration: none;
+  color:black;
+}
+#skapa-link{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  text-decoration: none;
+  color: white;
+}
+#skapa-link:hover, #start-link:hover{
+  color: darkgray;
+}
+#blog-posts{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-collapse: collapse;
+}
+thead tr th{
+  text-transform: uppercase;
+}
+#title-table{
+  width: 12%;
+}
+#content-table{
+  width: 55%;
+  padding: 5px;
+}
+#author-table{
+  width: 12%;
+}
+#date-table{
+  width: 10%;
+}
+#link-table{
+  width: 10%;
+}
+
+#blog-posts td, #blog-posts th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#blog-posts tr:nth-child(even){background-color: #f2f2f2;}
+
+#blog-posts tr:hover {background-color: #ddd;}
+
+#blog-posts th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+/*--------------------------------------------manage page slutar-------------------------*/
+
+/*-----------------------------------------create post börjar----------------------------*/
+#new-post{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: center;
+}
+#title{
+
+}
+#author{
+
+}
+#content{
+
+}
+label{
+  width: 60%;
+}
+input{
+  width: 60%;
+  background-color: darkgray;
+  color: white;
+}
+textarea{
+  width: 60%;
+  height: 400px;
+  padding: 10px;
+}
