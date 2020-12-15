@@ -16,10 +16,10 @@ async function fetchBlogpost() {
 
             tableHTML += //html skrukturen för varje film hämtning
             `<div class="row">
-                 <h2>${post.title}</h2>
+                 <h2 class="rubrik-text">${post.title}</h2>
                  <p><span class="date">- ${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</span></p>
-                 <p>${post.content}</p>
-                 <p>${post.author}</p>
+                 <p class="content-text">${post.content}</p>
+                 <p class="author-text">${post.author}</p>
            </div>`;
         }
         document.getElementById("content-postschema").innerHTML = tableHTML;

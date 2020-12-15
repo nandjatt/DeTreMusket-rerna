@@ -8,17 +8,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <a href="index.html">Start sida</a>
-            <h1>
-                Nytt inlägg
-            </h1>
+            <div class="header">
+                <a id="start" href="index.html">Start sida</a>
+                <h3> Nytt inlägg</h3>
+            </div>
+
             <form id="new-post">
                 <label for="title">Titel:</label><br>
                 <input type="text" id="title" name="title" value=""><br>
                 <label for="author">Författare:</label><br>
                 <input type="text" id="author" name="author" value=""><br><br>
                 <textarea name="content" id="content" cols="45" rows="5"></textarea> <br>
-                <input type="submit" value="Skapa inlägg">
+                <input id="create-btn" type="submit" value="Skapa inlägg">
             </form>
         </div>
 

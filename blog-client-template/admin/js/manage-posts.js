@@ -18,11 +18,11 @@ async function fetchBlogpost() {
 
             tableHTML +=
                 '<tr>' +
-                    '<td>' + `<p>${post.title} </td>` +
-                    '<td>' + `<p>${post.content} </td>` +
-                    '<td>' + `<p>${post.author} </td>` +
-                    '<td>' + `<p class="date">${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</p> </td>` +
-                    `<td>
+                    '<td id="title-table">' + `<p>${post.title} </td>` +
+                    '<td id="content-table">' + `<p>${post.content} </td>` +
+                    '<td id="author-table">' + `<p>${post.author} </td>` +
+                    '<td id="date-table">' + `<p class="date">${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</p> </td>` +
+                    `<td id="link-table">
                         <a href="../admin/update-post.html?id=${post['_id']}">Update</a> |
                         <a href="#" class="delete-post-btn" data-id="${post['_id']}">Delete</a>
                     </td>`;
