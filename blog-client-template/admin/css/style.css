@@ -69,30 +69,14 @@ h3{
 }
 thead tr th{
   text-transform: uppercase;
-
 }
-/* #title-table{
-  
-}
-#content-table{
-  width: 50%;
-  padding: 5px;
-}
-#author-table{
-  
-}
-#date-table{
-
-} */
 #link-table{
   width: 100px;
 } 
-
 #blog-posts td, #blog-posts th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
 #blog-posts tr:nth-child(even) {
   background-color: #f2f2f2;
 }
@@ -105,11 +89,10 @@ thead tr th{
   text-align: left;
   background-color: black;
   color: white;
- 
 } 
 /*--------------------------------------------manage page slutar-------------------------*/
 
-/*-----------------------------------------create post börjar----------------------------*/
+/*-----------------------------------------create/update post börjar----------------------------*/
 body{
     margin: 0;
     padding: 0;
@@ -154,7 +137,6 @@ input[type=submit]:hover {
   background-color: #ccc;
   padding-bottom: 50px;
 }
-/*-----------------------------------------create post ----------------------------*/
 #start{
     position: absolute;
   top: 8px;
