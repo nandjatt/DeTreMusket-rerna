@@ -8,16 +8,17 @@
 <body>
     <div class="container">
         <div class="row">
-            <a href="index.html">Start sida</a>
-            <h1>
-                Uppdatera inlägg
-            </h1>
-            <form id="update-post">
+            <div class="header">
+            <a id="start" href="index.html">Start sida</a>
+            <h3> Uppdatera inlägg</h3>
+            </div>
+
+            <form class="form">
                 <label for="title">Titel:</label><br>
                 <input type="text" id="title" name="title" value=""><br>
                 <label for="author">Författare:</label><br>
                 <input type="text" id="author" name="author" value=""><br>
-                <br>
+                <label for="skapa">Skapa inlägg:</label>
                 <textarea name="content" id="content" cols="45" rows="5"></textarea> <br>
                 <input type="submit" value="Uppdatera">
             </form>

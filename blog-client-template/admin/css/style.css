@@ -114,16 +114,11 @@ body{
     margin: 0;
     padding: 0;
 }
-#update-post{
+.form{
   padding: 20px;
-}
-#new-post{
-  display: block;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
-  border-collapse: collapse;
-  text-align: center;
 }
 header{
     position: relative;
@@ -194,6 +189,5 @@ label {
   clear: both;
 }
 #content{
-  margin-top: 30px;
   height: 250px;
 }
